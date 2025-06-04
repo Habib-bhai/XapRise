@@ -1,23 +1,27 @@
-import { Building2, FileText, LayoutList, LifeBuoy, Monitor, Plug, ShoppingCart, UploadCloud } from "lucide-react"
+import { Bot, Building2, FileText, LayoutList, LifeBuoy, Monitor, Plug, ShoppingCart, UploadCloud } from "lucide-react"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 
+
+
 const services = [
-    { icon: LayoutList, title: "Custom Web Development", description: "Tailored solutions to meet specific business needs. We create web applications that are scalable, secure, and user-friendly.", slug: "custom-web-development", number: "01" },
+    { icon: Bot, title: "Autonomous AI Agents Development", description: "Transform your business with scalable, intelligent AI agents built using the DACA (Dapr Agentic Cloud Ascent) architecture. Designed leveraging OpenAI Agents SDK, Dapr, and Kubernetes to deliver autonomous, cost-efficient automation for complex workflows, decision-making, and global-scale operations.", slug: "autonomous-ai-agents-development", number: "01" },
 
-    { icon: FileText, title: "Headless CMS Integration", description: "Flexible content management with systems like Sanity. We integrate headless CMS solutions to provide a robust backend for your content, allowing for easy updates and management.", slug: "headless-cms-integration", number: "02" },
+    { icon: LayoutList, title: "Custom Web Development", description: "Tailored solutions to meet specific business needs. We create web applications that are scalable, secure, and user-friendly.", slug: "custom-web-development", number: "02" },
 
-    { icon: Building2, title: "Enterprise Application Development", description: "Robust applications designed for large-scale operations. We specialize in building enterprise-level software that enhances productivity and efficiency.", slug: "enterprise-application-development", number: "03" },
+    { icon: FileText, title: "Headless CMS Integration", description: "Flexible content management with systems like Sanity. We integrate headless CMS solutions to provide a robust backend for your content, allowing for easy updates and management.", slug: "headless-cms-integration", number: "03" },
 
-    { icon: ShoppingCart, title: "E-Commerce Solutions", description: "Feature-rich online stores with secure payment integrations. We develop custom e-commerce platforms that provide seamless shopping experiences and drive sales.", slug: "e-commerce-solutions", number: "04" },
+    { icon: Building2, title: "Enterprise Application Development", description: "Robust applications designed for large-scale operations. We specialize in building enterprise-level software that enhances productivity and efficiency.", slug: "enterprise-application-development", number: "04" },
 
-    { icon: Plug, title: "API Development And Integration", description: "Connect front-end interfaces with robust back-end services. We build and integrate APIs that enable smooth communication between different backend components and frontends, enhancing functionality and user experience.", slug: "api-development-and-integration", number: "05" },
+    { icon: ShoppingCart, title: "E-Commerce Solutions", description: "Feature-rich online stores with secure payment integrations. We develop custom e-commerce platforms that provide seamless shopping experiences and drive sales.", slug: "e-commerce-solutions", number: "05" },
 
-    { icon: UploadCloud, title: "Migration And Upgradation Services", description: "Smooth transition from legacy systems to modern MERN-based applications. We ensure a seamless migration process, preserving data integrity and minimizing downtime.", slug: "migration-and-upgradation", number: "06" },
+    { icon: Plug, title: "API Development And Integration", description: "Connect front-end interfaces with robust back-end services. We build and integrate APIs that enable smooth communication between different backend components and frontends, enhancing functionality and user experience.", slug: "api-development-and-integration", number: "06" },
 
-    { icon: Monitor, title: "Single Page Applications (SPAs)", description: "Interactive SPAs for enhanced user experiences. We create SPAs that load quickly and provide a smooth, app-like experience, improving user engagement and satisfaction.", slug: "single-page-applications", number: "07" },
+    { icon: UploadCloud, title: "Migration And Upgradation Services", description: "Smooth transition from legacy systems to modern MERN-based applications. We ensure a seamless migration process, preserving data integrity and minimizing downtime.", slug: "migration-and-upgradation", number: "07" },
 
-    { icon: LifeBuoy, title: "Maintenance, Debugging & Support", description: "Ongoing support to ensure application stability and performance. We provide continuous maintenance and support services to keep your applications running smoothly, addressing any issues promptly.", slug: "maintenance-debugging-and-support", number: "08" }
+    { icon: Monitor, title: "Single Page Applications (SPAs)", description: "Interactive SPAs for enhanced user experiences. We create SPAs that load quickly and provide a smooth, app-like experience, improving user engagement and satisfaction.", slug: "single-page-applications", number: "08" },
+
+    { icon: LifeBuoy, title: "Maintenance, Debugging & Support", description: "Ongoing support to ensure application stability and performance. We provide continuous maintenance and support services to keep your applications running smoothly, addressing any issues promptly.", slug: "maintenance-debugging-and-support", number: "09" }
 ]
 
 export default function ServicesComponent() {

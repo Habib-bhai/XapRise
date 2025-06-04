@@ -1,385 +1,176 @@
 const { createClient } = require("next-sanity")
 
 const services = [
-
-    {
-  serviceTitle: "Enterprise Application Development",
-  serviceDescription:
-    "Build mission-critical enterprise applications that scale with your organization. Our expertise in MERN Stack and JAMstack architectures delivers robust, secure, and high-performance solutions for complex business workflows, data management, and user collaboration across your enterprise ecosystem.",
-  features: [
-    {
-      id: "1",
-      icon: "building",
-      title: "Scalable Enterprise Architecture",
-      description:
-        "Microservices-based MERN Stack applications designed for enterprise scale with load balancing, auto-scaling, and distributed systems architecture to handle millions of users and transactions.",
-    },
-    {
-      id: "2",
-      icon: "shield-check",
-      title: "Enterprise-Grade Security",
-      description:
-        "Comprehensive security implementation including SSO integration, multi-factor authentication, role-based access control, data encryption, and compliance with SOC 2, HIPAA, and GDPR standards.",
-    },
-    {
-      id: "3",
-      icon: "database",
-      title: "Advanced Data Management",
-      description:
-        "Complex data architectures with MongoDB clusters, Redis caching, real-time analytics, data warehousing integration, and advanced reporting capabilities for enterprise decision-making.",
-    },
-    {
-      id: "4",
-      icon: "users-cog",
-      title: "Workflow Automation",
-      description:
-        "Custom business process automation, approval workflows, document management systems, and integration with enterprise tools like Salesforce, SAP, and Microsoft 365.",
-    },
-    {
-      id: "5",
-      icon: "monitor",
-      title: "Admin Dashboards & Analytics",
-      description:
-        "Sophisticated administrative interfaces with real-time monitoring, custom reporting, data visualization, and business intelligence integration for executive decision support.",
-    },
-    {
-      id: "6",
-      icon: "globe",
-      title: "Multi-Tenant Architecture",
-      description:
-        "Scalable multi-tenant solutions supporting multiple organizations, departments, or clients with isolated data, customizable branding, and tenant-specific configurations.",
-    },
-  ],
-  processSteps: [
-    {
-      id: "1",
-      step: 1,
-      title: "Enterprise Requirements Analysis",
-      description:
-        "Comprehensive stakeholder interviews, business process mapping, compliance requirements assessment, and technical architecture planning aligned with enterprise IT strategy.",
-      duration: "3-4 weeks",
-    },
-    {
-      id: "2",
-      step: 2,
-      title: "System Architecture & Security Design",
-      description:
-        "Design enterprise-grade architecture with security frameworks, scalability planning, integration blueprints, and compliance strategy tailored to your industry requirements.",
-      duration: "3-5 weeks",
-    },
-    {
-      id: "3",
-      step: 3,
-      title: "Core Development & Integration",
-      description:
-        "Build enterprise application with advanced features, implement security protocols, develop APIs, and integrate with existing enterprise systems and third-party services.",
-      duration: "12-24 weeks",
-    },
-    {
-      id: "4",
-      step: 4,
-      title: "Security Auditing & Performance Testing",
-      description:
-        "Comprehensive security penetration testing, performance optimization, load testing, compliance validation, and user acceptance testing with enterprise stakeholders.",
-      duration: "4-6 weeks",
-    },
-    {
-      id: "5",
-      step: 5,
-      title: "Deployment & Enterprise Support",
-      description:
-        "Production deployment with monitoring setup, staff training, documentation delivery, and ongoing enterprise support with SLA guarantees and dedicated account management.",
-      duration: "Ongoing",
-    },
-  ],
-  faqs: [
-    {
-      id: "1",
-      question: "How do you ensure enterprise-level security and compliance?",
-      answer:
-        "We implement multi-layered security including encryption at rest and in transit, SSO integration, audit logging, and compliance frameworks for SOC 2, HIPAA, and GDPR. All code undergoes security audits and penetration testing.",
-    },
-    {
-      id: "2",
-      question: "Can you integrate with our existing enterprise systems?",
-      answer:
-        "Yes, we specialize in enterprise integrations with ERP systems, CRM platforms, Active Directory, LDAP, and legacy databases. We build robust APIs and middleware for seamless data flow across your enterprise ecosystem.",
-    },
-    {
-      id: "3",
-      question: "How do you handle enterprise scalability requirements?",
-      answer:
-        "We design with horizontal scaling in mind using microservices architecture, container orchestration, CDN integration, and cloud-native solutions that automatically scale based on demand and usage patterns.",
-    },
-    {
-      id: "4",
-      question: "What about ongoing maintenance and support for enterprise applications?",
-      answer:
-        "We provide comprehensive enterprise support including 24/7 monitoring, regular security updates, performance optimization, feature enhancements, and dedicated support teams with guaranteed SLA response times.",
-    },
-    {
-      id: "5",
-      question: "How do you manage complex enterprise workflows and approval processes?",
-      answer:
-        "We build custom workflow engines with configurable approval chains, automated notifications, document routing, and integration with enterprise collaboration tools to streamline complex business processes.",
-    },
-  ],
-  pricing: {
-    tiers: [
-      {
-        id: "1",
-        name: "Department Solution",
-        price: "$50,000 - $120,000",
-        description: "For single department or team applications",
-        features: [
-          "Custom enterprise application",
-          "Basic workflow automation",
-          "Single sign-on integration",
-          "Standard security implementation",
-          "6 months enterprise support",
-        ],
-      },
-      {
-        id: "2",
-        name: "Enterprise Platform",
-        price: "$120,000 - $350,000",
-        description: "For organization-wide solutions",
-        features: [
-          "Multi-module enterprise system",
-          "Advanced workflow automation",
-          "Comprehensive integrations",
-          "Enterprise security & compliance",
-          "Admin dashboards & analytics",
-          "12 months dedicated support",
-        ],
-        popular: true,
-      },
-      {
-        id: "3",
-        name: "Enterprise Ecosystem",
-        price: "$350,000+",
-        description: "For complex multi-system environments",
-        features: [
-          "Multi-tenant architecture",
-          "Advanced analytics & BI",
-          "Custom API development",
-          "Enterprise-grade infrastructure",
-          "Dedicated development team",
-          "24/7 enterprise support & SLA",
-        ],
-      },
-    ],
-    customAvailable: true,
-  },
-  benefits: [
-    "Streamlined business processes with automated workflows",
-    "Enhanced security and compliance with enterprise standards",
-    "Improved productivity through intuitive user interfaces",
-    "Scalable architecture that grows with your organization",
-    "Real-time insights through advanced analytics and reporting",
-  ],
-  whyChooseUs: {
-    title: "Why Choose XapRise for Enterprise Development?",
-    points: [
-      "25+ enterprise applications deployed for Fortune 500 companies",
-      "Certified experts in enterprise security and compliance frameworks",
-      "Proven track record with complex system integrations and migrations",
-      "Dedicated enterprise support teams with guaranteed SLA commitments",
-      "Agile development methodology with transparent project management",
-      "Long-term partnership approach with ongoing innovation support",
-    ],
-  }
-},
-
-
 {
-  serviceTitle: "API Development & Integration Services",
-  serviceDescription:
-    "Power your digital ecosystem with robust, scalable APIs that connect your applications, services, and data. Our expertise in Node.js, Next.js, and FastAPI delivers high-performance REST and GraphQL APIs with comprehensive integration capabilities for seamless data flow across your technology stack.",
+  serviceTitle: "Autonomous AI Agents Development",
+  serviceDescription: "Transform your business with scalable, intelligent AI agents built using the DACA (Dapr Agentic Cloud Ascent) architecture. Designed to handle up to 10 million concurrent agents, our solutions leverage OpenAI Agents SDK, Dapr, and Kubernetes to deliver autonomous, cost-efficient automation for complex workflows, decision-making, and global-scale operations.",
   features: [
     {
       id: "1",
-      icon: "link",
-      title: "Custom API Development",
-      description:
-        "Build powerful RESTful and GraphQL APIs using Node.js and FastAPI with optimized performance, comprehensive documentation, and industry-standard security protocols.",
+      icon: "layers",
+      title: "Planetary-Scale Architecture",
+      description: "Support for up to 10 million concurrent AI agents, ensuring scalability for enterprise-grade applications with distributed computing and load balancing."
     },
     {
       id: "2",
       icon: "zap",
-      title: "Next.js API Routes",
-      description:
-        "Leverage Next.js serverless functions and API routes for seamless full-stack applications with edge computing capabilities and automatic scaling.",
+      title: "Autonomous Decision-Making",
+      description: "Agents equipped with advanced reasoning and planning capabilities to execute tasks independently, minimizing human intervention."
     },
     {
       id: "3",
-      icon: "database",
-      title: "Database Integration",
-      description:
-        "Seamless integration with MongoDB, PostgreSQL, MySQL, and Redis with optimized queries, connection pooling, and real-time data synchronization capabilities.",
+      icon: "settings",
+      title: "Advanced Protocol Integration",
+      description: "Utilizes Model Context Protocol (MCP) and Agent2Agent (A2A) protocols for standardized tool usage and seamless agent interoperability."
     },
     {
       id: "4",
-      icon: "shield",
-      title: "API Security & Authentication",
-      description:
-        "Implement OAuth 2.0, JWT tokens, API rate limiting, request validation, and comprehensive security measures to protect your APIs from unauthorized access and attacks.",
+      icon: "cloud",
+      title: "Cloud-Native Deployment",
+      description: "Built on Kubernetes and Dapr for resilient, distributed systems that ensure high availability and global scalability."
     },
     {
       id: "5",
-      icon: "activity",
-      title: "Performance Optimization",
-      description:
-        "High-performance APIs with caching strategies, query optimization, load balancing, and monitoring to ensure fast response times and reliable service availability.",
-    },
-    {
-      id: "6",
-      icon: "puzzle",
-      title: "Third-Party Integrations",
-      description:
-        "Connect with payment gateways, CRM systems, social media platforms, cloud services, and enterprise software through robust API integrations and middleware solutions.",
-    },
+      icon: "CreditCard",
+      title: "Cost-Optimized Solutions",
+      description: "Leverages free-tier cloud services and self-hosted LLMs to deliver high performance at reduced operational costs."
+    }
   ],
   processSteps: [
     {
       id: "1",
       step: 1,
-      title: "API Strategy & Planning",
-      description:
-        "Analyze your integration requirements, design API architecture, define endpoints and data models, and create comprehensive API specification documentation.",
-      duration: "1-2 weeks",
+      title: "Requirements Analysis",
+      description: "In-depth consultation to understand your business needs, define agent objectives, and align with your strategic goals.",
+      duration: "1-2 weeks"
     },
     {
       id: "2",
       step: 2,
-      title: "Development & Implementation",
-      description:
-        "Build APIs using Node.js, Next.js, or FastAPI based on requirements, implement authentication and security measures, and develop comprehensive error handling.",
-      duration: "4-8 weeks",
+      title: "DACA Architecture Design",
+      description: "Custom design of the DACA architecture, selecting optimal tools, protocols, and cloud infrastructure for your use case.",
+      duration: "2-3 weeks"
     },
     {
       id: "3",
       step: 3,
-      title: "Integration & Testing",
-      description:
-        "Integrate with databases and third-party services, conduct thorough testing including load testing, security testing, and API endpoint validation.",
-      duration: "2-3 weeks",
+      title: "Agent Development",
+      description: "Build and test AI agents with OpenAI Agents SDK, integrating reasoning, memory, and execution capabilities.",
+      duration: "4-6 weeks"
     },
     {
       id: "4",
       step: 4,
-      title: "Documentation & Deployment",
-      description:
-        "Create comprehensive API documentation, deploy to production with monitoring setup, and provide SDK development for easy integration by developers.",
-      duration: "1-2 weeks",
+      title: "System Integration",
+      description: "Seamless integration of agents with your existing systems, APIs, and third-party tools for cohesive workflows.",
+      duration: "2-3 weeks"
     },
     {
       id: "5",
       step: 5,
-      title: "Monitoring & Optimization",
-      description:
-        "Continuous monitoring of API performance, usage analytics, security updates, and ongoing optimization based on usage patterns and feedback.",
-      duration: "Ongoing",
+      title: "Deployment & Optimization",
+      description: "Deploy agents on cloud platforms with Kubernetes, followed by performance tuning and scalability testing.",
+      duration: "1-2 weeks"
     },
+    {
+      id: "6",
+      step: 6,
+      title: "Monitoring & Support",
+      description: "Ongoing monitoring, updates, and dedicated support to ensure agents operate reliably and adapt to evolving needs.",
+      duration: "Ongoing"
+    }
   ],
   faqs: [
     {
       id: "1",
-      question: "Which technology should I choose: Node.js, Next.js, or FastAPI?",
-      answer:
-        "Node.js is ideal for complex backend APIs, Next.js for full-stack applications with API routes, and FastAPI for high-performance Python-based APIs with automatic documentation. We'll recommend the best fit based on your specific requirements.",
+      question: "What is the DACA architecture?",
+      answer: "The DACA (Dapr Agentic Cloud Ascent) architecture is a design pattern for building scalable AI agents using Dapr, OpenAI Agents SDK, and cloud-native technologies, capable of handling up to 10 million concurrent agents."
     },
     {
       id: "2",
-      question: "How do you ensure API security and protect against attacks?",
-      answer:
-        "We implement multiple security layers including authentication, rate limiting, input validation, CORS policies, and encryption. All APIs undergo security testing and follow OWASP guidelines for API security.",
+      question: "How do autonomous AI agents benefit my business?",
+      answer: "Our AI agents automate complex tasks, reduce operational costs, enhance decision-making, and scale effortlessly to meet growing demands, driving efficiency across your organization."
     },
     {
       id: "3",
-      question: "Can you integrate with our existing systems and databases?",
-      answer:
-        "Yes, we specialize in integrating APIs with existing databases, legacy systems, and third-party services. We ensure seamless data flow while maintaining data integrity and system performance.",
+      question: "Can the agents integrate with our existing systems?",
+      answer: "Yes, we ensure seamless integration with your systems through custom APIs, MCP, and A2A protocols, enabling interoperability with existing workflows and tools."
     },
     {
       id: "4",
-      question: "How do you handle API versioning and backward compatibility?",
-      answer:
-        "We implement proper API versioning strategies to ensure backward compatibility while allowing for future enhancements. This includes semantic versioning, deprecation notices, and migration paths for API consumers.",
+      question: "What is the typical project timeline?",
+      answer: "Project timelines depend on complexity but typically range from 12-16 weeks for full development, with detailed estimates provided during consultation."
     },
     {
       id: "5",
-      question: "What kind of documentation and support do you provide?",
-      answer:
-        "We provide comprehensive API documentation with interactive examples, SDKs for popular programming languages, and detailed integration guides. Ongoing support includes monitoring, updates, and developer assistance.",
-    },
+      question: "Do you provide ongoing support for AI agents?",
+      answer: "We offer comprehensive support, including 24/7 monitoring, regular updates, and optional training to ensure your agents remain effective and reliable."
+    }
   ],
   pricing: {
     tiers: [
       {
         id: "1",
-        name: "API Starter",
-        price: "$5,000 - $15,000",
-        description: "For simple API development and basic integrations",
+        name: "Starter Agent Solution",
+        price: "$25,000 - $50,000",
+        description: "Ideal for small-scale automation needs or pilot projects.",
         features: [
-          "Custom REST API development",
-          "Basic authentication setup",
-          "Database integration",
-          "API documentation",
-          "3 months support",
-        ],
+          "Single AI agent deployment",
+          "Basic task automation",
+          "Standard protocol integration",
+          "Cloud deployment setup",
+          "3 months support"
+        ]
       },
       {
         id: "2",
-        name: "Professional API",
-        price: "$15,000 - $40,000",
-        description: "For complex APIs with multiple integrations",
+        name: "Enterprise Agent Suite",
+        price: "$50,000 - $150,000",
+        description: "Comprehensive solution for large-scale business automation.",
         features: [
-          "Advanced API development",
-          "Multiple third-party integrations",
-          "Performance optimization",
-          "Comprehensive security setup",
-          "Load testing & monitoring",
-          "6 months support",
+          "Multi-agent system",
+          "Advanced automation workflows",
+          "MCP and A2A integration",
+          "Kubernetes-based deployment",
+          "6 months dedicated support"
         ],
-        popular: true,
+        popular: true
       },
       {
         id: "3",
-        name: "Enterprise API",
-        price: "$40,000+",
-        description: "For large-scale API ecosystems",
+        name: "Global Agent Ecosystem",
+        price: "$150,000+",
+        description: "Planetary-scale solution for complex, multi-system environments.",
         features: [
-          "Microservices API architecture",
-          "Advanced analytics & monitoring",
-          "Custom SDK development",
-          "Enterprise security compliance",
-          "Dedicated API management",
-          "12 months support & SLA",
-        ],
-      },
+          "Scalable multi-agent architecture",
+          "Custom protocol development",
+          "Advanced analytics integration",
+          "Global cloud infrastructure",
+          "12 months enterprise support"
+        ]
+      }
     ],
-    customAvailable: true,
+    customAvailable: true
   },
   benefits: [
-    "Seamless data flow between applications and services",
-    "Improved system interoperability and integration capabilities",
-    "Enhanced security with modern authentication and authorization",
-    "Scalable architecture that handles growing API demands",
-    "Comprehensive documentation for easy developer adoption",
+    "Effortless automation of complex business processes",
+    "Cost savings through optimized cloud and LLM usage",
+    "Scalable solutions for global enterprise needs",
+    "Enhanced decision-making with real-time insights",
+    "Future-ready technology for long-term growth"
   ],
   whyChooseUs: {
-    title: "Why Choose XapRise for API Development?",
+    title: "Why Choose Us for Autonomous AI Agents?",
     points: [
-      "150+ APIs developed with 99.9% uptime track record",
-      "Deep expertise in Node.js, Next.js, and FastAPI ecosystems",
-      "Proven experience with complex enterprise integrations",
-      "Security-first approach with comprehensive testing protocols",
-      "Performance optimization specialists achieving sub-100ms response times",
-      "Comprehensive documentation and developer support services",
-    ],
-  },
+      "Proven expertise in DACA architecture and agentic AI",
+      "Successful deployments across diverse industries",
+      "Innovative solutions with cutting-edge AI technologies",
+      "Dedicated support with guaranteed performance",
+      "Transparent, agile development process"
+    ]
+  }
 }
+
 ]
 
 const client = createClient({
@@ -424,7 +215,7 @@ function mapIconName(iconName) {
 function transformServiceToSanity(service, index) {
   return {
     _type: 'servicePage',
-    _id: `service-${index + 1}`, // Generate unique ID
+    _id: `service-${index + 3}`, // Generate unique ID
     title: service.serviceTitle,
     slug: {
       _type: 'slug',

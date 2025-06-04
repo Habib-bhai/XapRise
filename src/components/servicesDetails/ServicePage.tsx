@@ -91,35 +91,6 @@ export default function ServicePage({
         </div>
       </div>
 
-      {/* Header */}
-      <header className="relative z-10 border-b border-slate-800/50 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
-                <span className="text-slate-950 font-bold text-sm">X</span>
-              </div>
-              <span className="text-xl font-bold">XapRise</span>
-            </div>
-            <nav className="hidden md:flex items-center space-x-8">
-              <a href="#overview" className="text-slate-300 hover:text-emerald-400 transition-colors">
-                Overview
-              </a>
-              <a href="#features" className="text-slate-300 hover:text-emerald-400 transition-colors">
-                Features
-              </a>
-              <a href="#process" className="text-slate-300 hover:text-emerald-400 transition-colors">
-                Process
-              </a>
-              <a href="#pricing" className="text-slate-300 hover:text-emerald-400 transition-colors">
-                Pricing
-              </a>
-              <Button className="bg-emerald-500 hover:bg-emerald-600 text-slate-950">Get Started</Button>
-            </nav>
-          </div>
-        </div>
-      </header>
-
       {/* Hero Section */}
       <section className="relative z-10 py-20 lg:py-32">
         <div className="container mx-auto px-4">
@@ -434,7 +405,7 @@ export default function ServicePage({
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Footer
       <footer className="relative z-10 border-t border-slate-800 py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
@@ -447,7 +418,7 @@ export default function ServicePage({
             <p className="text-slate-400">© 2024 XapRise. All rights reserved.</p>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   )
 }
