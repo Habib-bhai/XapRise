@@ -2,150 +2,150 @@ const { createClient } = require("next-sanity")
 
 const services = [
 {
-  serviceTitle: "Autonomous AI Agents Development",
-  serviceDescription: "Transform your business with scalable, intelligent AI agents built using the DACA (Dapr Agentic Cloud Ascent) architecture. Designed to handle up to 10 million concurrent agents, our solutions leverage OpenAI Agents SDK, Dapr, and Kubernetes to deliver autonomous, cost-efficient automation for complex workflows, decision-making, and global-scale operations.",
+  serviceTitle: "AI Voice Agents & Automated Workflows",
+  serviceDescription: "Revolutionize customer engagement and streamline operations with AI-powered voice agents built using VAPI and automated workflows powered by n8n. Our service delivers intelligent, conversational AI agents that handle customer interactions seamlessly and integrates with no-code automation to optimize business processes, saving time and boosting efficiency.",
   features: [
     {
       id: "1",
-      icon: "layers",
-      title: "Planetary-Scale Architecture",
-      description: "Support for up to 10 million concurrent AI agents, ensuring scalability for enterprise-grade applications with distributed computing and load balancing."
+      icon: "smartphone",
+      title: "Conversational Voice Agents",
+      description: "Build AI voice agents with VAPI that handle customer queries, bookings, and support with natural, human-like interactions across multiple channels."
     },
     {
       id: "2",
       icon: "zap",
-      title: "Autonomous Decision-Making",
-      description: "Agents equipped with advanced reasoning and planning capabilities to execute tasks independently, minimizing human intervention."
+      title: "No-Code Workflow Automation",
+      description: "Leverage n8n to create automated workflows that connect your apps, streamline tasks, and trigger actions based on voice agent interactions."
     },
     {
       id: "3",
-      icon: "settings",
-      title: "Advanced Protocol Integration",
-      description: "Utilizes Model Context Protocol (MCP) and Agent2Agent (A2A) protocols for standardized tool usage and seamless agent interoperability."
+      icon: "cloud",
+      title: "Cloud-Based Scalability",
+      description: "Deploy voice agents and workflows on scalable cloud infrastructure, ensuring high availability and performance under heavy loads."
     },
     {
       id: "4",
-      icon: "cloud",
-      title: "Cloud-Native Deployment",
-      description: "Built on Kubernetes and Dapr for resilient, distributed systems that ensure high availability and global scalability."
+      icon: "settings",
+      title: "Seamless Integrations",
+      description: "Integrate with CRMs, ERPs, and communication platforms like Slack, WhatsApp, and Twilio for a unified business ecosystem."
     },
     {
       id: "5",
-      icon: "CreditCard",
-      title: "Cost-Optimized Solutions",
-      description: "Leverages free-tier cloud services and self-hosted LLMs to deliver high performance at reduced operational costs."
+      icon: "shield",
+      title: "Secure Data Handling",
+      description: "Ensure compliance with data privacy standards like GDPR and HIPAA, with encrypted voice data and secure workflow execution."
     }
   ],
   processSteps: [
     {
       id: "1",
       step: 1,
-      title: "Requirements Analysis",
-      description: "In-depth consultation to understand your business needs, define agent objectives, and align with your strategic goals.",
+      title: "Needs Assessment",
+      description: "Collaborate with your team to identify voice agent use cases and automation requirements, mapping out key business processes.",
       duration: "1-2 weeks"
     },
     {
       id: "2",
       step: 2,
-      title: "DACA Architecture Design",
-      description: "Custom design of the DACA architecture, selecting optimal tools, protocols, and cloud infrastructure for your use case.",
+      title: "Solution Design",
+      description: "Design VAPI-based voice agents and n8n workflows, defining conversation flows and automation triggers tailored to your needs.",
       duration: "2-3 weeks"
     },
     {
       id: "3",
       step: 3,
-      title: "Agent Development",
-      description: "Build and test AI agents with OpenAI Agents SDK, integrating reasoning, memory, and execution capabilities.",
-      duration: "4-6 weeks"
+      title: "Development & Testing",
+      description: "Build and rigorously test voice agents and workflows, ensuring natural interactions and reliable automation performance.",
+      duration: "3-5 weeks"
     },
     {
       id: "4",
       step: 4,
-      title: "System Integration",
-      description: "Seamless integration of agents with your existing systems, APIs, and third-party tools for cohesive workflows.",
+      title: "Integration",
+      description: "Connect voice agents and workflows with your existing systems, APIs, and third-party tools for seamless operation.",
       duration: "2-3 weeks"
     },
     {
       id: "5",
       step: 5,
-      title: "Deployment & Optimization",
-      description: "Deploy agents on cloud platforms with Kubernetes, followed by performance tuning and scalability testing.",
+      title: "Deployment & Training",
+      description: "Deploy the solution on cloud infrastructure, provide staff training, and set up monitoring for optimal performance.",
       duration: "1-2 weeks"
     },
     {
       id: "6",
       step: 6,
-      title: "Monitoring & Support",
-      description: "Ongoing monitoring, updates, and dedicated support to ensure agents operate reliably and adapt to evolving needs.",
+      title: "Ongoing Support",
+      description: "Offer continuous monitoring, updates, and support to ensure voice agents and workflows remain effective and up-to-date.",
       duration: "Ongoing"
     }
   ],
   faqs: [
     {
       id: "1",
-      question: "What is the DACA architecture?",
-      answer: "The DACA (Dapr Agentic Cloud Ascent) architecture is a design pattern for building scalable AI agents using Dapr, OpenAI Agents SDK, and cloud-native technologies, capable of handling up to 10 million concurrent agents."
+      question: "What can VAPI voice agents do for my business?",
+      answer: "VAPI voice agents can handle customer support, appointment scheduling, order processing, and more, providing 24/7 availability with natural, human-like conversations."
     },
     {
       id: "2",
-      question: "How do autonomous AI agents benefit my business?",
-      answer: "Our AI agents automate complex tasks, reduce operational costs, enhance decision-making, and scale effortlessly to meet growing demands, driving efficiency across your organization."
+      question: "How does n8n enhance automation?",
+      answer: "n8n enables no-code automation of repetitive tasks, connecting apps and triggering actions based on voice agent inputs or other events, streamlining your operations."
     },
     {
       id: "3",
-      question: "Can the agents integrate with our existing systems?",
-      answer: "Yes, we ensure seamless integration with your systems through custom APIs, MCP, and A2A protocols, enabling interoperability with existing workflows and tools."
+      question: "Can the solution integrate with our existing tools?",
+      answer: "Yes, we integrate with CRMs, ERPs, and platforms like Slack, WhatsApp, and Twilio, ensuring a cohesive workflow across your tech stack."
     },
     {
       id: "4",
-      question: "What is the typical project timeline?",
-      answer: "Project timelines depend on complexity but typically range from 12-16 weeks for full development, with detailed estimates provided during consultation."
+      question: "How long does it take to implement this solution?",
+      answer: "Depending on complexity, implementation typically takes 9-15 weeks, with detailed timelines provided during the initial consultation."
     },
     {
       id: "5",
-      question: "Do you provide ongoing support for AI agents?",
-      answer: "We offer comprehensive support, including 24/7 monitoring, regular updates, and optional training to ensure your agents remain effective and reliable."
+      question: "Is the solution secure and compliant?",
+      answer: "We implement encryption, secure APIs, and compliance with GDPR and HIPAA to protect voice data and ensure regulatory adherence."
     }
   ],
   pricing: {
     tiers: [
       {
         id: "1",
-        name: "Starter Agent Solution",
-        price: "$25,000 - $50,000",
-        description: "Ideal for small-scale automation needs or pilot projects.",
+        name: "Basic Voice Automation",
+        price: "$15,000 - $30,000",
+        description: "For small businesses needing simple voice agents and automation.",
         features: [
-          "Single AI agent deployment",
-          "Basic task automation",
-          "Standard protocol integration",
-          "Cloud deployment setup",
+          "Single VAPI voice agent",
+          "Basic n8n workflows",
+          "Standard integrations",
+          "Cloud deployment",
           "3 months support"
         ]
       },
       {
         id: "2",
-        name: "Enterprise Agent Suite",
-        price: "$50,000 - $150,000",
-        description: "Comprehensive solution for large-scale business automation.",
+        name: "Advanced Voice & Workflow Suite",
+        price: "$30,000 - $80,000",
+        description: "Comprehensive solution for medium to large businesses.",
         features: [
-          "Multi-agent system",
-          "Advanced automation workflows",
-          "MCP and A2A integration",
-          "Kubernetes-based deployment",
+          "Multi-channel voice agents",
+          "Advanced n8n workflows",
+          "CRM and ERP integrations",
+          "Scalable cloud infrastructure",
           "6 months dedicated support"
         ],
         popular: true
       },
       {
         id: "3",
-        name: "Global Agent Ecosystem",
-        price: "$150,000+",
-        description: "Planetary-scale solution for complex, multi-system environments.",
+        name: "Enterprise Voice Ecosystem",
+        price: "$80,000+",
+        description: "For complex, high-volume automation needs.",
         features: [
-          "Scalable multi-agent architecture",
-          "Custom protocol development",
-          "Advanced analytics integration",
-          "Global cloud infrastructure",
+          "Custom voice agent network",
+          "Complex n8n automation",
+          "Full system integrations",
+          "High-availability infrastructure",
           "12 months enterprise support"
         ]
       }
@@ -153,20 +153,20 @@ const services = [
     customAvailable: true
   },
   benefits: [
-    "Effortless automation of complex business processes",
-    "Cost savings through optimized cloud and LLM usage",
-    "Scalable solutions for global enterprise needs",
-    "Enhanced decision-making with real-time insights",
-    "Future-ready technology for long-term growth"
+    "24/7 customer engagement with intelligent voice agents",
+    "Streamlined operations through automated workflows",
+    "Scalable solutions for growing business needs",
+    "Enhanced customer experience with natural interactions",
+    "Cost savings via no-code automation and cloud efficiency"
   ],
   whyChooseUs: {
-    title: "Why Choose Us for Autonomous AI Agents?",
+    title: "Why Choose Us for AI Voice Agents & Automation?",
     points: [
-      "Proven expertise in DACA architecture and agentic AI",
-      "Successful deployments across diverse industries",
-      "Innovative solutions with cutting-edge AI technologies",
-      "Dedicated support with guaranteed performance",
-      "Transparent, agile development process"
+      "Expertise in VAPI and n8n for cutting-edge solutions",
+      "Proven success in automating customer interactions",
+      "Seamless integration with your existing tech stack",
+      "Dedicated support with performance guarantees",
+      "Agile process with transparent project management"
     ]
   }
 }
@@ -215,7 +215,7 @@ function mapIconName(iconName) {
 function transformServiceToSanity(service, index) {
   return {
     _type: 'servicePage',
-    _id: `service-${index + 3}`, // Generate unique ID
+    _id: `service-${index + 4}`, // Generate unique ID
     title: service.serviceTitle,
     slug: {
       _type: 'slug',

@@ -1,3 +1,4 @@
+import { IconAutomation } from "@tabler/icons-react"
 import { Bot, Building2, FileText, LayoutList, LifeBuoy, Monitor, Plug, ShoppingCart, UploadCloud } from "lucide-react"
 import Link from "next/link"
 import { useState, useEffect } from "react"
@@ -21,7 +22,9 @@ const services = [
 
     { icon: Monitor, title: "Single Page Applications (SPAs)", description: "Interactive SPAs for enhanced user experiences. We create SPAs that load quickly and provide a smooth, app-like experience, improving user engagement and satisfaction.", slug: "single-page-applications", number: "08" },
 
-    { icon: LifeBuoy, title: "Maintenance, Debugging & Support", description: "Ongoing support to ensure application stability and performance. We provide continuous maintenance and support services to keep your applications running smoothly, addressing any issues promptly.", slug: "maintenance-debugging-and-support", number: "09" }
+    { icon: LifeBuoy, title: "Maintenance, Debugging & Support", description: "Ongoing support to ensure application stability and performance. We provide continuous maintenance and support services to keep your applications running smoothly, addressing any issues promptly.", slug: "maintenance-debugging-and-support", number: "09" },
+
+    { icon: IconAutomation, title: "AI Voice Agents & Automated Workflows", description: "Revolutionize customer engagement and streamline operations with AI-powered voice agents built using VAPI and automated workflows powered by n8n. Our service delivers intelligent, conversational AI agents that handle customer interactions seamlessly and integrates with no-code automation to optimize business processes, saving time and boosting efficiency.", slug: "ai-voice-agents-automated-workflows", number: "10" }
 ]
 
 export default function ServicesComponent() {
