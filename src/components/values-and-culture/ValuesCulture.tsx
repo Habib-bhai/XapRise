@@ -65,7 +65,7 @@ export default function AnimatedSection() {
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {["Creative Production", "Custom Solutions", "Re-building Websites", "Highly SEO Optimized", "Highly Scalable", "Highly Responsive"].map((item, i) => (
+                        {["AI Agents", "Custom Solutions", "Re-building Websites", "Highly SEO Optimized", "Highly Scalable", "Highly Responsive"].map((item, i) => (
                             <div
                                 key={i}
                                 className={`flex items-center gap-3 transition-all duration-700 transform
@@ -78,9 +78,7 @@ export default function AnimatedSection() {
                         ))}
                     </div>
 
-                    {/* <p className="text-gray-400">
-                        Our Jamstack expertise helps businesses build SEO-optimized websites that excel in speed and scalability. By leveraging pre-rendered content and CDNs, we enhance core web vitals, boost search engine rankings, and drive higher organic traffic. This results in better user experiences and increased online visibility.
-                    </p> */}
+                    
                 </div>
 
                 {/* Image Content */}

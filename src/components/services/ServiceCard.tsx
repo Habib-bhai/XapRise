@@ -1,16 +1,28 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { ArrowRight } from "lucide-react"
+import { useState, useEffect, RefAttributes, ForwardRefExoticComponent } from "react"
+import { ArrowRight, LucideProps } from "lucide-react"
+import Link from "next/link"
+import { IconProps } from "@tabler/icons-react"
 
-interface ServiceCardProps {
+
+type CommonIconProps = {
+  size?: number | string;
+  stroke?: string; // Restrict to string | undefined to avoid number conflict
+  strokeWidth?: number | string;
+  className?: string;
+  // Include other common props as needed
+} & Omit<LucideProps, 'stroke' | 'size' | 'strokeWidth' | 'className'> &
+  Omit<IconProps, 'stroke' | 'size' | 'strokeWidth' | 'className'>;
+
+  interface ServiceCardProps {
   title: string
   description: string
-  icon: JSX.Element
-  href?: string
+  Icon: ForwardRefExoticComponent<CommonIconProps & RefAttributes<SVGSVGElement>>
+  slug: string
 }
 
-export function ServiceCard({ title, description, icon, href }: ServiceCardProps) {
+export function ServiceCard({ title, description, Icon, slug }: ServiceCardProps) {
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [isHovered, setIsHovered] = useState(false)
 
@@ -28,7 +40,7 @@ export function ServiceCard({ title, description, icon, href }: ServiceCardProps
 
   return (
     <div className="relative group" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-      <a href={href} target="_blank" rel="noopener noreferrer">
+      <Link href={`/service/${slug}`}  rel="noopener noreferrer">
         <div
           className="p-6 bg-zinc-900/50 border border-zinc-800 rounded-lg transition-all duration-300 ease-out
             hover:scale-105 hover:border-emerald-500/50"
@@ -51,7 +63,7 @@ export function ServiceCard({ title, description, icon, href }: ServiceCardProps
             {/* Icon container with shine effect */}
             <div className="relative w-full h-full text-emerald-500 overflow-hidden">
               <div className="w-full h-full relative">
-                {icon}
+                <Icon className="w-full h-full" />
                 {/* Shine effect */}
                 <div
                   className="absolute inset-0 w-full h-full animate-shine"
@@ -73,7 +85,7 @@ export function ServiceCard({ title, description, icon, href }: ServiceCardProps
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>
-      </a>
+      </Link>
     </div>
   )
 }

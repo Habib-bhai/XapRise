@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 function OurExperts() {
     const dummyExperts = [
         {
-            name: "Cassian Coleson",
+            name: "Anees",
             title: "Founder, CTO",
-            imageUrl: "/images/member.jpg",
+            imageUrl: "/images/anees.png",
             socialLinks: {
                 facebook: "https://facebook.com/cassian",
                 twitter: "https://twitter.com/cassian",
@@ -15,9 +15,9 @@ function OurExperts() {
             },
         },
         {
-            name: "Cassian Coleson",
-            title: "Founder, CTO",
-            imageUrl: "/images/member.jpg",
+            name: "Habib",
+            title: "Founder, CEO",
+            imageUrl: "/images/habib.jpg",
             socialLinks: {
                 facebook: "https://facebook.com/cassian",
                 twitter: "https://twitter.com/cassian",
@@ -26,9 +26,9 @@ function OurExperts() {
             },
         },
         {
-            name: "Cassian Coleson",
-            title: "Founder, CTO",
-            imageUrl: "/images/member.jpg",
+            name: "Hamza",
+            title: "Founder, COO",
+            imageUrl: "/images/hamza.png",
             socialLinks: {
                 facebook: "https://facebook.com/cassian",
                 twitter: "https://twitter.com/cassian",
@@ -37,16 +37,16 @@ function OurExperts() {
             },
         },
         {
-            name: "Cassian Coleson",
-            title: "Founder, CTO",
-            imageUrl: "/images/member.jpg",
+            name: "Nirma",
+            title: "Founder, DESIGN HEAD",
+            imageUrl: "/images/na.jpg",
             socialLinks: {
                 facebook: "https://facebook.com/cassian",
                 twitter: "https://twitter.com/cassian",
                 pinterest: "https://pinterest.com/cassian",
                 instagram: "https://instagram.com/cassian",
             },
-        },
+        }
 
     ];
 

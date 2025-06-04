@@ -25,7 +25,7 @@ export default function Footer() {
 
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Address Section */}
           <div className="space-y-6">
             <div className="flex items-start gap-2">
@@ -33,7 +33,7 @@ export default function Footer() {
               <div>
                 <h3 className="text-xl font-semibold mb-4">Address</h3>
                 <p className="text-gray-400">Karachi, Sindh Pakistan</p>
-                
+
               </div>
             </div>
             <div>
@@ -41,8 +41,8 @@ export default function Footer() {
                 <Send className="w-5 h-5 text-emerald-500" />
                 Say Hello
               </h3>
-              <p className="text-gray-400">habibahmed918131@gmail.com</p>
-              <p className="text-gray-400">info@support.com</p>
+              <p className="text-gray-400">habib.dev.2006@gmail.com</p>
+              <p className="text-gray-400">xaprise.solutions@gmail.com</p>
             </div>
             <div className="space-y-4">
               <h3 className="text-xl font-semibold">See Our New updates</h3>
@@ -64,15 +64,15 @@ export default function Footer() {
             <h3 className="text-xl font-semibold mb-4">Our Solutions</h3>
             <ul className="space-y-3">
               {[
-                "Web Development",
-                "Mobile Development",
-                "Cloud Services",
-                "Network Connectivity",
-                "Data analytics",
-                "Software Development",
+                "Autonomous AI Agents Development",
+                "Custom Web Development",
+                "Headless CMS Integration",
+                "Enterprise Application Development",
+                "E-Commerce Solutions",
+                "API Development And Integration",
               ].map((item) => (
                 <li key={item}>
-                  <Link href="#" className="text-gray-400 hover:text-emerald-500 transition-colors">
+                  <Link  href={`/service/${item.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} className="text-gray-400 hover:text-emerald-500 transition-colors">
                     {item}
                   </Link>
                 </li>
@@ -84,29 +84,37 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
-              {["About Us", "Case Study", "News & Article", "Our Team", "All Portfolio", "Pricing Plan"].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="text-gray-400 hover:text-emerald-500 transition-colors">
-                    {item}
+                <li>
+                  <Link href={"/about"} className="text-gray-400 hover:text-emerald-500 transition-colors">
+                    About Us
                   </Link>
                 </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Resources</h3>
-            <ul className="space-y-3">
-              {["Support Area", "Support Policy", "Terms & Conditions", "Privacy Policy", "Career", "Pricing Plan"].map(
-                (item) => (
-                  <li key={item}>
-                    <Link href="#" className="text-gray-400 hover:text-emerald-500 transition-colors">
-                      {item}
-                    </Link>
-                  </li>
-                ),
-              )}
+                <li>
+                  <Link href={"/casestudy"} className="text-gray-400 hover:text-emerald-500 transition-colors">
+                    Case Studies
+                  </Link>
+                </li>
+                <li>
+                  <Link href={"/about"} className="text-gray-400 hover:text-emerald-500 transition-colors">
+                    Our Team
+                  </Link>
+                </li>
+                <li>
+                  <Link href={"/project"} className="text-gray-400 hover:text-emerald-500 transition-colors">
+                    Our Portfolio
+                  </Link>
+                </li>
+                <li>
+                  <Link href={"/service"} className="text-gray-400 hover:text-emerald-500 transition-colors">
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link href={"/contact"} className="text-gray-400 hover:text-emerald-500 transition-colors">
+                    Contact
+                  </Link>
+                </li>
+              
             </ul>
           </div>
         </div>

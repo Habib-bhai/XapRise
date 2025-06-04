@@ -33,7 +33,7 @@ const TeamMember: React.FC<Expert> = ({
                 alt="member image"
                 width={200}
                 height={200}
-                className="group-hover:rounded-none transition-all duration-500 w-44 h-40 object-cover rounded-t-full"
+                className="group-hover:rounded-none transition-all duration-500 w-44 h-40 object-cover object-top rounded-t-full"
             />
 
             <div className="flex flex-col">

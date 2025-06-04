@@ -2,8 +2,9 @@
 
 import { useState, useEffect, useRef } from "react"
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion"
-import { ArrowRight, Star, Zap, Shield, Award, ChevronDown, Sparkles, TrendingUp, Plug, Bug } from "lucide-react"
+import { ArrowRight, Star, Zap, Shield, Award, ChevronDown, Sparkles, TrendingUp, Plug } from "lucide-react"
 import Link from "next/link"
+import { IconAutomation } from "@tabler/icons-react"
 
 export default function PremiumHero() {
   // eslint-disable-next-line
@@ -15,8 +16,6 @@ export default function PremiumHero() {
   // Advanced parallax layers
   const y1 = useTransform(scrollY, [0, 500], [0, -150])
   const y2 = useTransform(scrollY, [0, 500], [0, -100])
-  //   eslint-disable-next-line
-  const y3 = useTransform(scrollY, [0, 500], [0, -50])
 
   // Magnetic cursor effect
   const cursorX = useMotionValue(0)
@@ -191,7 +190,7 @@ export default function PremiumHero() {
             {/* Revolutionary Typography */}
             <motion.div className="space-y-6">
               <motion.h1
-                className="text-4xl sm:text-6xl lg:text-8xl font-black leading-none"
+                className="text-3xl lg:text-5xl font-black leading-none"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.6 }}
@@ -231,7 +230,7 @@ export default function PremiumHero() {
 
               {/* Breathing Text Effect */}
               <motion.p
-                className="my-10 text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl"
+                className="my-10 text-lg sm:text-xl  text-gray-300 leading-relaxed max-w-2xl"
                 animate={{
                   scale: [1, 1.02, 1],
                 }}
@@ -266,12 +265,12 @@ export default function PremiumHero() {
               {[
                 { icon: TrendingUp, value: "80%", label: "ROI Increase", color: "emerald" },
                 { icon: Plug, value: "20+", label: "APIs Built", color: "blue" },
-                { icon: Bug, value: "90+", label: "Bugs Squashed", color: "purple" },
+                { icon: IconAutomation, value: "20+", label: "AI Agents built", color: "purple" },
                 { icon: Zap, value: "0.3s", label: "Load Time", color: "pink" },
               ].map((metric, index) => (
                 <motion.div
                   key={metric.label}
-                  className="group relative p-4 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/20 rounded-2xl hover:border-emerald-500/50 transition-all duration-300"
+                  className="group relative p-3 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/20 rounded-2xl hover:border-emerald-500/50 transition-all duration-300"
                   whileHover={{ scale: 1.05, y: -5 }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
