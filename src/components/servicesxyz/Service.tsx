@@ -11,9 +11,9 @@ const services = [
 
     { icon: ShoppingCart, title: "E-Commerce Solutions", description: "Feature-rich online stores with secure payment integrations. We develop custom e-commerce platforms that provide seamless shopping experiences and drive sales.", slug: "e-commerce-solutions", number: "04" },
 
-    { icon: Plug, title: "API Development & Integration", description: "Connect front-end interfaces with robust back-end services. We build and integrate APIs that enable smooth communication between different backend components and frontends, enhancing functionality and user experience.", slug: "api-development", number: "05" },
+    { icon: Plug, title: "API Development And Integration", description: "Connect front-end interfaces with robust back-end services. We build and integrate APIs that enable smooth communication between different backend components and frontends, enhancing functionality and user experience.", slug: "api-development-and-integration", number: "05" },
 
-    { icon: UploadCloud, title: "Migration & Upgradation Services", description: "Smooth transition from legacy systems to modern MERN-based applications. We ensure a seamless migration process, preserving data integrity and minimizing downtime.", slug: "migration-and-upgradation", number: "06" },
+    { icon: UploadCloud, title: "Migration And Upgradation Services", description: "Smooth transition from legacy systems to modern MERN-based applications. We ensure a seamless migration process, preserving data integrity and minimizing downtime.", slug: "migration-and-upgradation", number: "06" },
 
     { icon: Monitor, title: "Single Page Applications (SPAs)", description: "Interactive SPAs for enhanced user experiences. We create SPAs that load quickly and provide a smooth, app-like experience, improving user engagement and satisfaction.", slug: "single-page-applications", number: "07" },
 

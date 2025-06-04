@@ -1,5 +1,6 @@
 import { defineType, defineField } from 'sanity'
 
+
 export default defineType({
   name: 'feature',
   type: 'object',
@@ -26,6 +27,11 @@ export default defineType({
       options: {
         list: [
           { title: 'Code', value: 'code' },
+          { title: 'RefreshCcw', value: 'RefreshCcw' },
+          { title: 'CreditCart', value: 'CreditCard' },
+          { title: 'ShoppingCart', value: 'shoppingCart' },
+          { title: 'Globe', value: 'Globe' },
+          { title: 'Layers', value: 'layers' },
           { title: 'Smartphone', value: 'smartphone' },
           { title: 'Cloud', value: 'cloud' },
           { title: 'Database', value: 'database' },
