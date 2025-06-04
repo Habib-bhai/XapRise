@@ -18,11 +18,11 @@ const services = [
 
     { icon: Plug, title: "API Development And Integration", description: "Connect front-end interfaces with robust back-end services. We build and integrate APIs that enable smooth communication between different backend components and frontends, enhancing functionality and user experience.", slug: "api-development-and-integration", number: "06" },
 
-    { icon: UploadCloud, title: "Migration And Upgradation Services", description: "Smooth transition from legacy systems to modern MERN-based applications. We ensure a seamless migration process, preserving data integrity and minimizing downtime.", slug: "migration-and-upgradation", number: "07" },
+    { icon: UploadCloud, title: "Migration And Upgradation", description: "Smooth transition from legacy systems to modern MERN-based applications. We ensure a seamless migration process, preserving data integrity and minimizing downtime.", slug: "migration-and-upgradation", number: "07" },
 
-    { icon: Monitor, title: "Single Page Applications (SPAs)", description: "Interactive SPAs for enhanced user experiences. We create SPAs that load quickly and provide a smooth, app-like experience, improving user engagement and satisfaction.", slug: "single-page-applications", number: "08" },
+    { icon: Monitor, title: "Single Page Applications", description: "Interactive SPAs for enhanced user experiences. We create SPAs that load quickly and provide a smooth, app-like experience, improving user engagement and satisfaction.", slug: "single-page-applications", number: "08" },
 
-    { icon: LifeBuoy, title: "Maintenance, Debugging & Support", description: "Ongoing support to ensure application stability and performance. We provide continuous maintenance and support services to keep your applications running smoothly, addressing any issues promptly.", slug: "maintenance-debugging-and-support", number: "09" },
+    { icon: LifeBuoy, title: "Maintenance, Debugging and Support", description: "Ongoing support to ensure application stability and performance. We provide continuous maintenance and support services to keep your applications running smoothly, addressing any issues promptly.", slug: "maintenance-debugging-and-support", number: "09" },
 
     { icon: IconAutomation, title: "AI Voice Agents & Automated Workflows", description: "Revolutionize customer engagement and streamline operations with AI-powered voice agents built using VAPI and automated workflows powered by n8n. Our service delivers intelligent, conversational AI agents that handle customer interactions seamlessly and integrates with no-code automation to optimize business processes, saving time and boosting efficiency.", slug: "ai-voice-agents-automated-workflows", number: "10" }
 ]

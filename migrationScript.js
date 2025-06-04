@@ -2,175 +2,176 @@ const { createClient } = require("next-sanity")
 
 const services = [
 {
-  serviceTitle: "AI Voice Agents & Automated Workflows",
-  serviceDescription: "Revolutionize customer engagement and streamline operations with AI-powered voice agents built using VAPI and automated workflows powered by n8n. Our service delivers intelligent, conversational AI agents that handle customer interactions seamlessly and integrates with no-code automation to optimize business processes, saving time and boosting efficiency.",
+  serviceTitle: "Maintenance, Debugging, and Support for MERN & JAMstack Applications",
+  serviceDescription: "Ensure your MERN and JAMstack applications run smoothly with our comprehensive maintenance, debugging, and support services. We provide proactive monitoring, rapid issue resolution, performance optimization, and feature updates to keep your applications secure, scalable, and aligned with your business goals.",
   features: [
     {
       id: "1",
-      icon: "smartphone",
-      title: "Conversational Voice Agents",
-      description: "Build AI voice agents with VAPI that handle customer queries, bookings, and support with natural, human-like interactions across multiple channels."
+      icon: "settings",
+      title: "Proactive Monitoring",
+      description: "24/7 monitoring of your MERN and JAMstack applications to detect and address performance issues, downtime, or security threats in real-time."
     },
     {
       id: "2",
-      icon: "zap",
-      title: "No-Code Workflow Automation",
-      description: "Leverage n8n to create automated workflows that connect your apps, streamline tasks, and trigger actions based on voice agent interactions."
+      icon: "shield",
+      title: "Security Patching",
+      description: "Regular security updates and patches to protect your applications from vulnerabilities, ensuring compliance with GDPR, SOC 2, and other standards."
     },
     {
       id: "3",
-      icon: "cloud",
-      title: "Cloud-Based Scalability",
-      description: "Deploy voice agents and workflows on scalable cloud infrastructure, ensuring high availability and performance under heavy loads."
+      icon: "zap",
+      title: "Performance Optimization",
+      description: "Optimize application speed and scalability with techniques like code splitting, database indexing, and CDN integration for MERN and JAMstack stacks."
     },
     {
       id: "4",
-      icon: "settings",
-      title: "Seamless Integrations",
-      description: "Integrate with CRMs, ERPs, and communication platforms like Slack, WhatsApp, and Twilio for a unified business ecosystem."
+      icon: "database",
+      title: "Bug Fixing & Debugging",
+      description: "Rapid identification and resolution of bugs in React, Node.js, MongoDB, or static site generators, ensuring uninterrupted functionality."
     },
     {
       id: "5",
-      icon: "shield",
-      title: "Secure Data Handling",
-      description: "Ensure compliance with data privacy standards like GDPR and HIPAA, with encrypted voice data and secure workflow execution."
+      icon: "cloud",
+      title: "Cloud Infrastructure Support",
+      description: "Manage and optimize cloud deployments on AWS, Vercel, or Netlify, ensuring high availability and cost-efficient resource usage."
+    },
+    {
+      id: "6",
+      icon: "users",
+      title: "Feature Enhancements",
+      description: "Implement new features, update APIs, and integrate third-party services to keep your application competitive and user-friendly."
     }
   ],
   processSteps: [
     {
       id: "1",
       step: 1,
-      title: "Needs Assessment",
-      description: "Collaborate with your team to identify voice agent use cases and automation requirements, mapping out key business processes.",
+      title: "Application Assessment",
+      description: "Analyze your MERN or JAMstack application to identify performance bottlenecks, security risks, and maintenance needs.",
       duration: "1-2 weeks"
     },
     {
       id: "2",
       step: 2,
-      title: "Solution Design",
-      description: "Design VAPI-based voice agents and n8n workflows, defining conversation flows and automation triggers tailored to your needs.",
-      duration: "2-3 weeks"
+      title: "Support Plan Design",
+      description: "Create a customized maintenance and support plan, including monitoring tools, SLAs, and priority levels for issue resolution.",
+      duration: "1-2 weeks"
     },
     {
       id: "3",
       step: 3,
-      title: "Development & Testing",
-      description: "Build and rigorously test voice agents and workflows, ensuring natural interactions and reliable automation performance.",
-      duration: "3-5 weeks"
+      title: "Monitoring Setup",
+      description: "Implement monitoring tools and configure alerts for performance, uptime, and security, tailored to your application’s stack.",
+      duration: "1 week"
     },
     {
       id: "4",
       step: 4,
-      title: "Integration",
-      description: "Connect voice agents and workflows with your existing systems, APIs, and third-party tools for seamless operation.",
-      duration: "2-3 weeks"
+      title: "Ongoing Maintenance",
+      description: "Perform regular updates, security patches, bug fixes, and optimizations to ensure consistent performance and reliability.",
+      duration: "Ongoing"
     },
     {
       id: "5",
       step: 5,
-      title: "Deployment & Training",
-      description: "Deploy the solution on cloud infrastructure, provide staff training, and set up monitoring for optimal performance.",
-      duration: "1-2 weeks"
-    },
-    {
-      id: "6",
-      step: 6,
-      title: "Ongoing Support",
-      description: "Offer continuous monitoring, updates, and support to ensure voice agents and workflows remain effective and up-to-date.",
+      title: "Support & Enhancements",
+      description: "Provide dedicated support for issue resolution, feature additions, and third-party integrations, with regular performance reports.",
       duration: "Ongoing"
     }
   ],
   faqs: [
     {
       id: "1",
-      question: "What can VAPI voice agents do for my business?",
-      answer: "VAPI voice agents can handle customer support, appointment scheduling, order processing, and more, providing 24/7 availability with natural, human-like conversations."
+      question: "What does your maintenance service cover?",
+      answer: "Our service includes 24/7 monitoring, security patching, bug fixing, performance optimization, and feature updates for MERN and JAMstack applications."
     },
     {
       id: "2",
-      question: "How does n8n enhance automation?",
-      answer: "n8n enables no-code automation of repetitive tasks, connecting apps and triggering actions based on voice agent inputs or other events, streamlining your operations."
+      question: "How quickly do you resolve issues?",
+      answer: "We offer tiered SLAs with response times as low as 1 hour for critical issues, depending on your chosen support plan."
     },
     {
       id: "3",
-      question: "Can the solution integrate with our existing tools?",
-      answer: "Yes, we integrate with CRMs, ERPs, and platforms like Slack, WhatsApp, and Twilio, ensuring a cohesive workflow across your tech stack."
+      question: "Can you support applications built by other developers?",
+      answer: "Yes, we conduct a thorough code review and assessment to take over maintenance and support for any MERN or JAMstack application."
     },
     {
       id: "4",
-      question: "How long does it take to implement this solution?",
-      answer: "Depending on complexity, implementation typically takes 9-15 weeks, with detailed timelines provided during the initial consultation."
+      question: "How do you ensure security for our applications?",
+      answer: "We apply regular security patches, implement encryption, and conduct vulnerability scans to ensure compliance with standards like GDPR and SOC 2."
     },
     {
       id: "5",
-      question: "Is the solution secure and compliant?",
-      answer: "We implement encryption, secure APIs, and compliance with GDPR and HIPAA to protect voice data and ensure regulatory adherence."
+      question: "Can you add new features to our existing application?",
+      answer: "Absolutely, we provide feature enhancements, API updates, and third-party integrations to keep your application competitive and up-to-date."
     }
   ],
   pricing: {
     tiers: [
       {
         id: "1",
-        name: "Basic Voice Automation",
-        price: "$15,000 - $30,000",
-        description: "For small businesses needing simple voice agents and automation.",
+        name: "Basic Support",
+        price: "$1,000 - $2,500/month",
+        description: "For small applications needing essential maintenance.",
         features: [
-          "Single VAPI voice agent",
-          "Basic n8n workflows",
-          "Standard integrations",
-          "Cloud deployment",
-          "3 months support"
+          "24/7 basic monitoring",
+          "Monthly security patches",
+          "Standard bug fixing",
+          "Email support",
+          "Quarterly performance reports"
         ]
       },
       {
         id: "2",
-        name: "Advanced Voice & Workflow Suite",
-        price: "$30,000 - $80,000",
-        description: "Comprehensive solution for medium to large businesses.",
+        name: "Pro Support",
+        price: "$2,500 - $5,000/month",
+        description: "For growing applications with advanced needs.",
         features: [
-          "Multi-channel voice agents",
-          "Advanced n8n workflows",
-          "CRM and ERP integrations",
-          "Scalable cloud infrastructure",
-          "6 months dedicated support"
+          "24/7 advanced monitoring",
+          "Weekly security patches",
+          "Priority bug fixing",
+          "Phone and email support",
+          "Monthly performance optimization",
+          "Basic feature updates"
         ],
         popular: true
       },
       {
         id: "3",
-        name: "Enterprise Voice Ecosystem",
-        price: "$80,000+",
-        description: "For complex, high-volume automation needs.",
+        name: "Enterprise Support",
+        price: "$5,000+/month",
+        description: "For mission-critical applications with high demands.",
         features: [
-          "Custom voice agent network",
-          "Complex n8n automation",
-          "Full system integrations",
-          "High-availability infrastructure",
-          "12 months enterprise support"
+          "24/7 premium monitoring",
+          "Real-time security patching",
+          "Immediate bug resolution",
+          "Dedicated support team",
+          "Custom feature development",
+          "Bi-weekly performance reports"
         ]
       }
     ],
     customAvailable: true
   },
   benefits: [
-    "24/7 customer engagement with intelligent voice agents",
-    "Streamlined operations through automated workflows",
-    "Scalable solutions for growing business needs",
-    "Enhanced customer experience with natural interactions",
-    "Cost savings via no-code automation and cloud efficiency"
+    "Uninterrupted application performance with proactive monitoring",
+    "Enhanced security with regular patches and compliance checks",
+    "Faster issue resolution to minimize downtime",
+    "Scalable support tailored to your application’s growth",
+    "Continuous improvements to keep your app competitive"
   ],
   whyChooseUs: {
-    title: "Why Choose Us for AI Voice Agents & Automation?",
+    title: "Why Choose Us for MERN & JAMstack Maintenance?",
     points: [
-      "Expertise in VAPI and n8n for cutting-edge solutions",
-      "Proven success in automating customer interactions",
-      "Seamless integration with your existing tech stack",
-      "Dedicated support with performance guarantees",
-      "Agile process with transparent project management"
+      "Deep expertise in MERN and JAMstack technologies",
+      "Proven track record in maintaining high-performance applications",
+      "Rapid response times with tiered SLA commitments",
+      "Comprehensive security and compliance solutions",
+      "Transparent reporting and dedicated support teams",
+      "Flexible plans to suit businesses of all sizes"
     ]
   }
 }
-
 ]
 
 const client = createClient({
@@ -215,7 +216,7 @@ function mapIconName(iconName) {
 function transformServiceToSanity(service, index) {
   return {
     _type: 'servicePage',
-    _id: `service-${index + 4}`, // Generate unique ID
+    _id: `service-${index + 6}`, // Generate unique ID
     title: service.serviceTitle,
     slug: {
       _type: 'slug',
