@@ -71,7 +71,6 @@ export default function Home() {
         <div className="w-screen bg-black text-white overflow-x-hidden">
           <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
           <NavigationOverlay isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
-          {/* <Hero /> */}
           <PremiumHero />
           <ValuesCulture />
           <ServicesComponent />

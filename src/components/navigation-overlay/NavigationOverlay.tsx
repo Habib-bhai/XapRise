@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { Facebook, Plus, Twitter, PinIcon as Pinterest, Instagram } from "lucide-react"
+import { Facebook,  Twitter,Instagram, Plus } from "lucide-react"
 import Link from "next/link"
 
 
@@ -9,6 +9,22 @@ interface NavigationOverlayProps {
   isOpen: boolean
   setIsOpen: (value: boolean) => void
 }
+
+
+const socialLinks = [
+    {
+        Icon: Facebook,
+        href: "https://www.facebook.com/profile.php?id=61576950210343"
+    },
+    {
+        Icon: Twitter,
+        href: "https://twitter.com/yourprofile"
+    },
+    {
+        Icon: Instagram,
+        href: "https://www.instagram.com/xap_rise?igsh=YzljYTk1ODg3Zg=="
+    }
+];
 
 const menuItems = ["HOME", "ABOUT", "SERVICE", "PROJECT", "CASESTUDY", "CONTACT"]
 
@@ -26,16 +42,16 @@ export default function NavigationOverlay({ isOpen, setIsOpen }: NavigationOverl
 
           {/* Social Links */}
           <div className=" fixed right-2 lg:right-[2.5%] xl:right-[1%]  top-[40%] z-30 -translate-y-1/2 lg:flex flex-col space-y-6 lg:space-y-8">
-            {[Facebook, Twitter, Pinterest, Instagram].map((Icon, index) => (
+            {socialLinks.map((Icon, index) => (
               <motion.a
                 key={index}
-                href="#"
+                href={Icon.href}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
                 className="flex h-8 w-8 lg:h-10 lg:w-10 items-center justify-center text-white/60 hover:text-white transition-colors"
               >
-                <Icon className="h-8 w-8" />
+                <Icon.Icon className="h-8 w-8" />
               </motion.a>
             ))}
           </div>
