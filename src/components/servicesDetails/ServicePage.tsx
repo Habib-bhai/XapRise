@@ -32,6 +32,8 @@ import {
 } from "lucide-react"
 import type { IServicePage } from "@/lib/serviceTypes" 
 import Link from "next/link"
+import { projectDetails } from "@/schema/projectDetails"
+import { toast } from "sonner"
 
 const iconMap = {
   code: Code,
@@ -65,12 +67,38 @@ export default function ServicePage({
     message: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
-  }
-
+ const handleSubmit = async (e: React.FormEvent) => {
+         e.preventDefault()
+         const validatedData = await projectDetails.safeParseAsync(formData)
+         if (!validatedData.success) {
+             const errorMessage = validatedData.error.errors[0]?.message || "Validation failed";
+             console.log(errorMessage)
+             return
+         }
+ 
+         try {
+             const response = await fetch("/api/project_details", {
+                 method: "POST",
+                 headers: {
+                     "Content-Type": "application/json"
+                 },
+                 body: JSON.stringify(validatedData.data)
+             })
+ 
+             const responseJson = await response.json()
+ 
+             if (!response.ok) {
+                 toast.error(responseJson.error)
+                 return
+             }
+ 
+             toast.success("Message Sent.")
+         }
+         // eslint-disable-next-line
+         catch (error: any) {
+             toast.error(error.message)
+         }
+     }
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       {/* Geometric Background Pattern */}
@@ -99,11 +127,11 @@ export default function ServicePage({
             </h1>
             <p className="text-xl lg:text-2xl text-slate-300 mb-8 leading-relaxed">{description}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href={"/contact"} className="bg-emerald-500 hover:bg-emerald-600 text-slate-950 px-8">
+              <Link href={"/contact"} className="flex gap-4 bg-emerald-500 hover:bg-emerald-600 text-slate-950 px-10 py-4 rounded-md">
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link href={"/contact"} className="border-slate-600 text-white hover:bg-slate-800">
+              <Link href={"/contact"} className="border-slate-600 text-white hover:bg-slate-800 px-10 py-4 rounded-md flex">
                 Schedule Consultation
               </Link>
             </div>
@@ -346,11 +374,11 @@ export default function ServicePage({
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
                     <Mail className="h-6 w-6 text-emerald-400" />
-                    <span className="text-slate-300">contact@xaprise.com</span>
+                    <span className="text-slate-300">xaprise.solutions@gmail.com</span>
                   </div>
                   <div className="flex items-center space-x-4">
                     <Phone className="h-6 w-6 text-emerald-400" />
-                    <span className="text-slate-300">+1 (555) 123-4567</span>
+                    <span className="text-slate-300">+92 3343295024</span>
                   </div>
                   <div className="flex items-center space-x-4">
                     <Calendar className="h-6 w-6 text-emerald-400" />
@@ -358,9 +386,9 @@ export default function ServicePage({
                   </div>
                 </div>
                 <div className="mt-8">
-                  <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-slate-950">
+                  <Link href={"/contact"} className="bg-emerald-500 hover:bg-emerald-600 text-slate-950 p-3 rounded-xl">
                     Schedule Free Consultation
-                  </Button>
+                  </Link>
                 </div>
               </div>
               <div>
@@ -404,20 +432,7 @@ export default function ServicePage({
         </div>
       </section>
 
-      {/* Footer
-      <footer className="relative z-10 border-t border-slate-800 py-12">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
-                <span className="text-slate-950 font-bold text-sm">X</span>
-              </div>
-              <span className="text-xl font-bold">XapRise</span>
-            </div>
-            <p className="text-slate-400">© 2024 XapRise. All rights reserved.</p>
-          </div>
-        </div>
-      </footer> */}
+
     </div>
   )
 }
