@@ -6,7 +6,8 @@ import processStep from './processStep'
 import pricing from './pricing'
 import pricingTier from './pricingTier'
 import whyChooseUs from './whyChooseUs'
+import contact from './contact'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [servicePage, feature, faq, processStep, pricing, pricingTier, whyChooseUs],
+  types: [servicePage, feature, faq, processStep, pricing, pricingTier, whyChooseUs, contact],
 }

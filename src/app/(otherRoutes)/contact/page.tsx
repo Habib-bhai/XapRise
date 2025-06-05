@@ -2,26 +2,75 @@
 import React from 'react'
 import HeroBannerWithRouteName from '@/components/Banner/HeroBannerWithRouteName'
 import { useState } from "react"
-import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, PinIcon as Pinterest } from "lucide-react"
+import { MapPin, Phone, Mail, Facebook, Twitter, Instagram } from "lucide-react"
+import Link from 'next/link'
+import { contactFormSchema } from '@/schema/contact'
+import { toast } from 'sonner'
+
+
+
+const socialLinks = [
+    {
+        Icon: Facebook,
+        href: "https://www.facebook.com/profile.php?id=61576950210343"
+    },
+    {
+        Icon: Twitter,
+        href: "https://twitter.com/yourprofile"
+    },
+    {
+        Icon: Instagram,
+        href: "https://www.instagram.com/xap_rise?igsh=YzljYTk1ODg3Zg=="
+    }
+];
+
 export default function ContactPage() {
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
+        service: "",
         company: "",
         email: "",
         phone: "",
-        message: "",
+        query: "",
     })
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target
         setFormData((prev) => ({ ...prev, [name]: value }))
     }
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
-        console.log("Form submitted:", formData)
-        // Add your form submission logic here
+        const validatedData = await contactFormSchema.safeParseAsync(formData)
+        if (!validatedData.success) {
+            const errorMessage = validatedData.error.errors[0]?.message || "Validation failed";
+            console.log(errorMessage)
+            return
+        }
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(validatedData.data)
+            })
+
+            const responseJson = await response.json()
+
+            if (!response.ok) {
+                toast.error(responseJson.error)
+                return
+            }
+
+            toast.success("Message Sent.")
+        }
+        // eslint-disable-next-line
+        catch (error: any) {
+            toast.error(error.message)
+        }
     }
 
 
@@ -35,8 +84,7 @@ export default function ContactPage() {
                         <p className="text-emerald-500 uppercase font-medium text-sm">CONTACT WITH US</p>
                         <h2 className="text-4xl font-bold tracking-tight">LET&apos;S WORK TOGETHER?</h2>
                         <p className="text-gray-400 mt-4">
-                            I have world-class, flexible support via live chat, email and phone. I guarantee that you&apos;ll be able to
-                            have any issue resolved within 24 hours.
+                            Your Win is Our Success. Let&apos;s connect to discuss your project, and build a relation that gives your business new sky-high limits.
                         </p>
                     </div>
 
@@ -56,7 +104,6 @@ export default function ContactPage() {
                             </div>
                             <div>
                                 <p className="text-gray-300">+92 334-295024</p>
-                                <p className="text-gray-300">+apna number add kardiyo</p>
                             </div>
                         </div>
 
@@ -65,8 +112,8 @@ export default function ContactPage() {
                                 <Mail size={20} />
                             </div>
                             <div>
-                                <p className="text-gray-300">I&apos;ll give you the official email(ibad)</p>
-                                <p className="text-gray-300">habibahmed918131@gmail.com</p>
+                                <p className="text-gray-300">xaprise.solutions@gmail.com</p>
+                                <p className="text-gray-300">habib.dev.2006@gmail.com</p>
                             </div>
                         </div>
                     </div>
@@ -75,14 +122,14 @@ export default function ContactPage() {
                         <h3 className="font-bold text-xl">Follow Us</h3>
                         <p className="text-gray-400">Follow us on Social Network</p>
                         <div className="flex gap-2 mt-2">
-                            {[Facebook, Twitter, Instagram, Pinterest].map((Icon, index) => (
-                                <a
+                            {socialLinks.map((socialhandle, index) => (
+                                <Link
                                     key={index}
-                                    href="#"
+                                    href={socialhandle.href}
                                     className="w-10 h-10 border border-gray-700 flex items-center justify-center hover:border-emerald-500 hover:text-emerald-500 transition-colors"
                                 >
-                                    <Icon size={18} />
-                                </a>
+                                    <socialhandle.Icon size={18} />
+                                </Link>
                             ))}
                         </div>
                     </div>
@@ -136,6 +183,33 @@ export default function ContactPage() {
                     </div>
 
                     <div className="mb-4">
+                        <label htmlFor="service" className="block text-sm mb-1">
+                            Select Service <span className="text-red-500">*</span>
+                        </label>
+                        <select
+                            id="service"
+                            name="service"
+                            value={formData.service}
+                            onChange={handleChange}
+                            required
+                            className="w-full p-2.5 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                        >
+                            <option value="" disabled>Select a service</option>
+                            <option value="Autonomous AI Agents Development">Autonomous AI Agents Development</option>
+                            <option value="AI Voice Agents & Automated Workflows">AI Voice Agents & Automated Workflows</option>
+                            <option value="Enterprise Application Development">Enterprise Application Development</option>
+                            <option value="Custom Web Development">Custom Web Development</option>
+                            <option value="API Development And Integration">API Development And Integration</option>
+                            <option value="Headless CMS Integration">Headless CMS Integration (JamStack)</option>
+                            <option value="E-Commerce Solutions">E-Commerce Solutions</option>
+                            <option value="Single Page Applications">Single Page Applications</option>
+                            <option value="Migration And Upgradation">Migration And Upgradation</option>
+                            <option value="Consulting">Consulting</option>
+                            {/* Add more services as needed */}
+                        </select>
+                    </div>
+
+                    <div className="mb-4">
                         <label htmlFor="email" className="block text-sm mb-1">
                             Email
                         </label>
@@ -164,13 +238,13 @@ export default function ContactPage() {
                     </div>
 
                     <div className="mb-6">
-                        <label htmlFor="message" className="block text-sm mb-1">
-                            Message
+                        <label htmlFor="query" className="block text-sm mb-1">
+                            Query
                         </label>
                         <textarea
-                            id="message"
-                            name="message"
-                            value={formData.message}
+                            id="query"
+                            name="query"
+                            value={formData.query}
                             onChange={handleChange}
                             rows={4}
                             className="w-full p-2.5 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-1 focus:ring-emerald-500"

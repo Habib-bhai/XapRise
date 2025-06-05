@@ -31,6 +31,7 @@ import {
   Calendar,
 } from "lucide-react"
 import type { IServicePage } from "@/lib/serviceTypes" 
+import Link from "next/link"
 
 const iconMap = {
   code: Code,
@@ -49,8 +50,6 @@ const iconMap = {
 export default function ServicePage({
   title,
   description,
-//   eslint-disable-next-line
-  heroImage,
   features,
   processSteps,
   faqs,
@@ -100,13 +99,13 @@ export default function ServicePage({
             </h1>
             <p className="text-xl lg:text-2xl text-slate-300 mb-8 leading-relaxed">{description}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-slate-950 px-8">
+              <Link href={"/contact"} className="bg-emerald-500 hover:bg-emerald-600 text-slate-950 px-8">
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-slate-600 text-white hover:bg-slate-800">
+              </Link>
+              <Link href={"/contact"} className="border-slate-600 text-white hover:bg-slate-800">
                 Schedule Consultation
-              </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -280,9 +279,9 @@ export default function ServicePage({
               {pricing.customAvailable && (
                 <div className="text-center mt-12">
                   <p className="text-slate-300 mb-4">Need a custom solution?</p>
-                  <Button variant="outline" className="border-emerald-500 text-emerald-400 hover:bg-emerald-500/10">
+                  <Link href="/contact" className="border-emerald-500 text-emerald-400 hover:bg-emerald-500/10">
                     Request Custom Quote
-                  </Button>
+                  </Link>
                 </div>
               )}
             </div>

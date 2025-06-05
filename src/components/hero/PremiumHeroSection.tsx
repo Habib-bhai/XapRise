@@ -594,7 +594,7 @@ export default function PremiumHero() {
 
             {/* Central Holographic Element - Hidden on mobile */}
             <motion.div
-              className="hidden lg:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 sm:w-48 h-32 sm:h-48"
+              className="hidden lg:block absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 sm:w-48 h-32 sm:h-48"
               animate={{
                 rotateY: [0, 360],
                 scale: [1, 1.1, 1],
@@ -606,7 +606,7 @@ export default function PremiumHero() {
                 {[...Array(3)].map((_, i) => (
                   <motion.div
                     key={i}
-                    className={`absolute inset-${i * 4} border-2 border-emerald-500/30 rounded-full`}
+                    className={`absolute inset-${i * 3} border-2 border-emerald-500/30 rounded-full`}
                     animate={{
                       rotate: [0, 360],
                     }}
