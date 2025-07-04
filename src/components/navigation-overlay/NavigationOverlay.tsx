@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { Facebook, Plus, Twitter, PinIcon as Pinterest, Instagram, Linkedin } from "lucide-react"
+import { Facebook, Plus, Twitter,  Instagram, Linkedin } from "lucide-react"
 import Link from "next/link"
 
 

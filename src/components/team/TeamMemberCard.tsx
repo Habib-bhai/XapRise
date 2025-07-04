@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import { Facebook, Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 
 // Define the type for an expert card
