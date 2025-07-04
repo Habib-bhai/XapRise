@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { Facebook,  Twitter,Instagram, Plus } from "lucide-react"
+import { Facebook, Plus, Twitter, PinIcon as Pinterest, Instagram, Linkedin } from "lucide-react"
 import Link from "next/link"
 
 
@@ -9,21 +9,11 @@ interface NavigationOverlayProps {
   isOpen: boolean
   setIsOpen: (value: boolean) => void
 }
-
-
 const socialLinks = [
-    {
-        Icon: Facebook,
-        href: "https://www.facebook.com/profile.php?id=61576950210343"
-    },
-    {
-        Icon: Twitter,
-        href: "https://twitter.com/yourprofile"
-    },
-    {
-        Icon: Instagram,
-        href: "https://www.instagram.com/xap_rise?igsh=YzljYTk1ODg3Zg=="
-    }
+  { Icon: Facebook, url: "https://www.facebook.com/profile.php?id=61576950210343" },
+  { Icon: Twitter, url: "https://x.com/xapriseSolution" },
+  { Icon: Instagram, url: "https://www.instagram.com/xap_rise/" },
+  { Icon: Linkedin, url: "https://www.linkedin.com/posts/xaprise_xaprise-voiceai-customerexperience-activity-7345165887664021505-Ea-0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAETfzR4BJO94XGe3PUjQGHlNJO6EiTi-Iug" },
 ];
 
 const menuItems = ["HOME", "ABOUT", "SERVICE", "PROJECT", "CASESTUDY", "CONTACT"]
@@ -45,7 +35,8 @@ export default function NavigationOverlay({ isOpen, setIsOpen }: NavigationOverl
             {socialLinks.map((Icon, index) => (
               <motion.a
                 key={index}
-                href={Icon.href}
+                href={Icon.url}
+                target="_blank"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}

@@ -1,55 +1,56 @@
 import React from 'react'
 import TeamMember from './TeamMemberCard';
 import { motion } from 'framer-motion';
+import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 function OurExperts() {
-    const dummyExperts = [
+     const dummyExperts = [
+        
         {
-            name: "Anees",
+            name: "Muhammad Anees",
             title: "Founder, CTO",
             imageUrl: "/images/anees.png",
-            socialLinks: {
-                facebook: "https://facebook.com/cassian",
-                twitter: "https://twitter.com/cassian",
-                pinterest: "https://pinterest.com/cassian",
-                instagram: "https://instagram.com/cassian",
-            },
+            socialLinks: [
+                { Icon: Facebook, url: "https://www.facebook.com/profile.php?id=61576950210343" },
+                { Icon: Twitter, url: "https://x.com/xapriseSolution" },
+                { Icon: Instagram, url: "https://www.instagram.com/xap_rise/" },
+                { Icon: Linkedin, url: "https://www.linkedin.com/posts/xaprise_xaprise-voiceai-customerexperience-activity-7345165887664021505-Ea-0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAETfzR4BJO94XGe3PUjQGHlNJO6EiTi-Iug" },
+            ],
         },
         {
-            name: "Habib",
+            name: "Habib Ullah",
             title: "Founder, CEO",
             imageUrl: "/images/habib.jpg",
-            socialLinks: {
-                facebook: "https://facebook.com/cassian",
-                twitter: "https://twitter.com/cassian",
-                pinterest: "https://pinterest.com/cassian",
-                instagram: "https://instagram.com/cassian",
-            },
+            socialLinks: [
+                { Icon: Facebook, url: "https://www.facebook.com/profile.php?id=61576950210343" },
+                { Icon: Twitter, url: "https://x.com/xapriseSolution" },
+                { Icon: Instagram, url: "https://www.instagram.com/xap_rise/" },
+                { Icon: Linkedin, url: "https://www.linkedin.com/posts/xaprise_xaprise-voiceai-customerexperience-activity-7345165887664021505-Ea-0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAETfzR4BJO94XGe3PUjQGHlNJO6EiTi-Iug" },
+            ],
         },
         {
-            name: "Hamza",
-            title: "Founder, COO",
-            imageUrl: "/images/hamza.png",
-            socialLinks: {
-                facebook: "https://facebook.com/cassian",
-                twitter: "https://twitter.com/cassian",
-                pinterest: "https://pinterest.com/cassian",
-                instagram: "https://instagram.com/cassian",
-            },
-        },
-        {
-            name: "Nirma",
-            title: "Founder, DESIGN HEAD",
+            name: "Nirma Qureshi",
+            title: "Designing Head",
             imageUrl: "/images/na.jpg",
-            socialLinks: {
-                facebook: "https://facebook.com/cassian",
-                twitter: "https://twitter.com/cassian",
-                pinterest: "https://pinterest.com/cassian",
-                instagram: "https://instagram.com/cassian",
-            },
-        }
+            socialLinks: [
+                { Icon: Facebook, url: "https://www.facebook.com/profile.php?id=61576950210343" },
+                { Icon: Twitter, url: "https://x.com/xapriseSolution" },
+                { Icon: Instagram, url: "https://www.instagram.com/xap_rise/" },
+                { Icon: Linkedin, url: "https://www.linkedin.com/posts/xaprise_xaprise-voiceai-customerexperience-activity-7345165887664021505-Ea-0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAETfzR4BJO94XGe3PUjQGHlNJO6EiTi-Iug" },
+            ],
+        },
+        {
+            name: "Parizah Shaikh",
+            title: "Business Development Executive",
+            imageUrl: "/images/parizah.png",
+            socialLinks: [
+                { Icon: Facebook, url: "https://www.facebook.com/profile.php?id=61576950210343" },
+                { Icon: Twitter, url: "https://x.com/xapriseSolution" },
+                { Icon: Instagram, url: "https://www.instagram.com/xap_rise/" },
+                { Icon: Linkedin, url: "https://www.linkedin.com/posts/xaprise_xaprise-voiceai-customerexperience-activity-7345165887664021505-Ea-0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAETfzR4BJO94XGe3PUjQGHlNJO6EiTi-Iug" },
+            ],
+        },
 
     ];
-
     return (
         <section className="my-24 w-full bg-black py-12 flex justify-center items-center flex-col">
 

@@ -49,11 +49,12 @@ export default function Home() {
       link: "https://askary-institute-web.vercel.app/",
     },
     {
-      title: "Project Delta",
-      description: "Created an AI-powered tool that reduced operational costs.",
-      imageUrl: "/images/aipower.jpg",
+      title: "Lucky Mart",
+      description: "A frontend for an online Mart!",
+      imageUrl: "/images/LUCKY_MART.png",
       metrics: "Operational costs reduced by 30%",
-      link: "#",
+      link: "https://milestone-3-ecommerce-lemon.vercel.app/",
+      
     },
     {
       title: "Project Epsilon",
